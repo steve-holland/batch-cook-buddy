@@ -1,0 +1,7 @@
+<h1><%= @box.label %></h1>
+<%= link_to "Back", boxes_path %>
+
+<% if authenticated? %>
+  <%= link_to "Edit", edit_box_path(@box) %>
+  <%= button_to "Delete", @box, method: :delete, data: { turbo_confirm: "Are you sure?" } %>
+<% end %>
