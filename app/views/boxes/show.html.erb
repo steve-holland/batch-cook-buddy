@@ -1,4 +1,7 @@
-<h1><%= @box.label %></h1>
+<% cache @box do %>
+  <h1><%= @box.label %></h1>
+<% end %>
+
 <%= link_to "Back", boxes_path %>
 
 <% if authenticated? %>
